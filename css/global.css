@@ -6,10 +6,10 @@
   /* Paleta Oficial */
   --parchment: #f7f4ee;
   --parchment-deep: #eee8dd;
-  --olive-dark: #2c3527;
-  --olive-deep: #1d2319;
-  --olive-muted: #3d4a36;
-  --olive-card: #262f22;
+  --olive-dark: #132942;
+  --olive-deep: #132942;
+  --olive-muted: #132942;
+  --olive-card: #132942;
   --gold-accent: #c2a673;
   --gold-light: #dfc99e;
   --gold-wax: #eed195;
@@ -100,7 +100,7 @@ svg {
 /* Textura de Papel Artesanal Fino */
 .bg-paper-texture {
   background-color: var(--parchment);
-  background-image: 
+  background-image:
     radial-gradient(#d3c9ba 0.75px, transparent 0.75px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(230, 222, 207, 0.35));
   background-size: 24px 24px, 100% 100%;
@@ -108,23 +108,19 @@ svg {
 
 /* Borde Rasgado Superior / Inferior (Deckled Torn Paper Edge) */
 .torn-edge-top {
-  clip-path: polygon(
-    0% 0%, 5% 10px, 10% 2px, 15% 12px, 20% 3px, 25% 11px, 
-    30% 2px, 35% 14px, 40% 4px, 45% 12px, 50% 3px, 55% 13px, 
-    60% 4px, 65% 12px, 70% 2px, 75% 11px, 80% 3px, 85% 13px, 
-    90% 4px, 95% 11px, 100% 0%, 100% 100%, 0% 100%
-  );
+  clip-path: polygon(0% 0%, 5% 10px, 10% 2px, 15% 12px, 20% 3px, 25% 11px,
+      30% 2px, 35% 14px, 40% 4px, 45% 12px, 50% 3px, 55% 13px,
+      60% 4px, 65% 12px, 70% 2px, 75% 11px, 80% 3px, 85% 13px,
+      90% 4px, 95% 11px, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .torn-edge-bottom {
-  clip-path: polygon(
-    0% 0%, 100% 0%, 100% 100%, 95% calc(100% - 10px), 90% calc(100% - 2px),
-    85% calc(100% - 12px), 80% calc(100% - 4px), 75% calc(100% - 11px), 70% calc(100% - 2px),
-    65% calc(100% - 12px), 60% calc(100% - 4px), 55% calc(100% - 11px), 50% calc(100% - 3px),
-    45% calc(100% - 13px), 40% calc(100% - 4px), 35% calc(100% - 12px), 30% calc(100% - 2px),
-    25% calc(100% - 11px), 20% calc(100% - 3px), 15% calc(100% - 12px), 10% calc(100% - 2px),
-    5% calc(100% - 10px), 0% 100%
-  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% calc(100% - 10px), 90% calc(100% - 2px),
+      85% calc(100% - 12px), 80% calc(100% - 4px), 75% calc(100% - 11px), 70% calc(100% - 2px),
+      65% calc(100% - 12px), 60% calc(100% - 4px), 55% calc(100% - 11px), 50% calc(100% - 3px),
+      45% calc(100% - 13px), 40% calc(100% - 4px), 35% calc(100% - 12px), 30% calc(100% - 2px),
+      25% calc(100% - 11px), 20% calc(100% - 3px), 15% calc(100% - 12px), 10% calc(100% - 2px),
+      5% calc(100% - 10px), 0% 100%);
 }
 
 /* Marco en Arco para Fotografía */

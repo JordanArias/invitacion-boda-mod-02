@@ -19,7 +19,7 @@
    HEADER DECORATIVO BOTÁNICO
    ========================================================================== */
 .invitation-header {
-  padding: 1.75rem 1.5rem 0.5rem 1.5rem;
+  padding: 0rem 1.5rem 0.5rem 1.5rem;
   text-align: center;
   position: relative;
 }
@@ -115,6 +115,8 @@
   padding: 0.75rem 1.75rem;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: visible;
 }
 
 .arch-photo-wrapper {
@@ -210,6 +212,8 @@
 .blessing-parents-section {
   padding: 1.5rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .blessing-quote-card {
@@ -294,8 +298,10 @@
    SAVE THE DATE & CALENDARIO & CUENTA REGRESIVA
    ========================================================================== */
 .save-the-date-section {
-  padding: 1rem 1.5rem;
+  padding: 4rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .save-the-date-title {
@@ -468,7 +474,7 @@
   height: 176px;
   width: 100%;
   overflow: hidden;
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem 0;
   border-top: 1px solid #D0C6B3;
   border-bottom: 1px solid #D0C6B3;
 }
@@ -688,11 +694,30 @@
   transform: scale(1.15);
 }
 
-.swatch-1 { background-color: #F4EFE6; border: 1px solid #E2D5C0; }
-.swatch-2 { background-color: #A9B299; border: 1px solid #919C7E; }
-.swatch-3 { background-color: #6A7659; border: 1px solid #5A6549; }
-.swatch-4 { background-color: #8E7B6C; border: 1px solid #7B695A; }
-.swatch-5 { background-color: #2D3627; border: 1px solid #1E241A; }
+.swatch-1 {
+  background-color: #F4EFE6;
+  border: 1px solid #E2D5C0;
+}
+
+.swatch-2 {
+  background-color: #A9B299;
+  border: 1px solid #919C7E;
+}
+
+.swatch-3 {
+  background-color: #6A7659;
+  border: 1px solid #5A6549;
+}
+
+.swatch-4 {
+  background-color: #8E7B6C;
+  border: 1px solid #7B695A;
+}
+
+.swatch-5 {
+  background-color: #2D3627;
+  border: 1px solid #1E241A;
+}
 
 .gift-registry-text {
   font-family: var(--font-serif);
@@ -750,6 +775,8 @@
 .venues-section {
   padding: 1.5rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .venues-title {
@@ -1021,19 +1048,32 @@
 
 .qr-box-card {
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0.85rem;
   background-color: #FFFFFF;
   border: 1px solid #CDBFAB;
-  border-radius: 0.85rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.85rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.qr-box-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(44, 53, 39, 0.15);
+  border-color: var(--gold-accent);
 }
 
 .qr-box-card svg,
-.qr-box-card img {
+.qr-box-card img,
+.qr-code-img {
   width: 144px;
   height: 144px;
+  display: block;
   object-fit: contain;
+  border-radius: 0.65rem;
+  background-color: #FFFFFF;
 }
 
 .website-link-text {
@@ -1050,6 +1090,8 @@
 .rsvp-section {
   padding: 1.5rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .rsvp-box-card {
@@ -1110,7 +1152,7 @@
   width: 100%;
   padding: 0.85rem 1rem;
   border-radius: 0.5rem;
-  background-color: #128C7E;
+  background-color: #132942;
   color: #FFFFFF;
   font-family: var(--font-sans);
   font-size: 10px;
@@ -1293,8 +1335,8 @@
    ========================================================================== */
 .floating-music-btn {
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 7.25rem;
+  right: 0.25rem;
   z-index: 90;
   width: 52px;
   height: 52px;
@@ -1366,4 +1408,109 @@
   border-radius: 0.5rem;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
   object-fit: contain;
+}
+
+/* ==========================================================================
+   ELEMENTOS FLORALES DECORATIVOS (flores_1.png & flores_2.png)
+   ========================================================================== */
+
+/* Guirnalda Superior de Corona (flores_1.png con base recta en la parte superior) */
+.top-floral-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.floral-crown-img {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: top center;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.1));
+}
+
+/* Flores de Esquina entre contenedor y margen de la web (flores_2.png) */
+.section-floral-corner {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 0;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-floral-corner img {
+  display: block;
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.section-floral-corner.top-left {
+  top: 0;
+  left: 0;
+  transform: none;
+  transform-origin: top left;
+}
+
+.section-floral-corner.top-right {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+  transform-origin: top right;
+}
+
+.section-floral-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+  transform-origin: bottom left;
+}
+
+.section-floral-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1);
+  transform-origin: bottom right;
+}
+
+/* Flores en las esquinas inferiores del marco de foto de novios */
+.arch-floral-corner {
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+  pointer-events: none;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.arch-floral-corner.left {
+  left: 0;
+  transform: scaleY(-1);
+  transform-origin: bottom left;
+}
+
+.arch-floral-corner.right {
+  right: 0;
+  transform: scale(-1);
+  transform-origin: bottom right;
+}
+
+.arch-floral-corner img {
+  width: 135px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
 }
