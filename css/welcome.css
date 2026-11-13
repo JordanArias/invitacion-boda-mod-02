@@ -1,0 +1,221 @@
+/* ==========================================================================
+   WELCOME.CSS - ESTILOS EXCLUSIVOS DE LA PÁGINA DE BIENVENIDA (index.html)
+   Proyecto: Boda Andrés & Margot
+   ========================================================================== */
+
+/* Contenedor principal de la bienvenida */
+.welcome-page-body {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 1.25rem 1rem;
+  background-color: var(--color-linen);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-height: 700px) {
+  .welcome-page-body {
+    padding: 1.75rem 1.5rem 2.25rem 1.5rem;
+  }
+}
+
+/* Encabezado superior sutil */
+.welcome-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-stone-muted);
+  opacity: 0.9;
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .welcome-header {
+    padding: 1.5rem 2rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Sección central: Marco circular botánico dorado y monograma */
+.welcome-emblem-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 640px) {
+  .welcome-emblem-section {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome-emblem-section {
+    max-width: 460px;
+  }
+}
+
+/* SVG Botánico de Fondo */
+.welcome-botanical-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Monograma caligráfico de los novios */
+.welcome-monogram-box {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.welcome-monogram {
+  font-family: var(--font-script-alex);
+  font-size: 6.5rem;
+  line-height: 0.95;
+  color: var(--color-sage-800);
+  text-shadow: 0 4px 15px rgba(61, 77, 62, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .welcome-monogram {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome-monogram {
+    font-size: 9rem;
+  }
+}
+
+.welcome-monogram-y {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.2rem;
+  color: var(--color-gold);
+  margin: 0 0.2rem;
+  opacity: 0.9;
+}
+
+@media (min-width: 640px) {
+  .welcome-monogram-y {
+    font-size: 2.75rem;
+  }
+}
+
+/* Fecha de la boda bajo el monograma */
+.welcome-wedding-date {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .welcome-wedding-date {
+    font-size: 1.35rem;
+    letter-spacing: 0.38em;
+  }
+}
+
+/* Pie de página con acciones */
+.welcome-footer-actions {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Botón «Ingresar a mi invitación» */
+.welcome-enter-btn {
+  position: relative;
+  width: 100%;
+  padding: 1.1rem 2rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--color-sage-700) 0%, var(--color-sage-800) 100%);
+  color: var(--color-linen);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 28px rgba(61, 77, 62, 0.35);
+  border: 1px solid rgba(222, 184, 135, 0.4);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.welcome-enter-btn:hover {
+  background: linear-gradient(135deg, var(--color-sage-600) 0%, var(--color-sage-700) 100%);
+  box-shadow: 0 14px 34px rgba(61, 77, 62, 0.45);
+  transform: translateY(-2px);
+  border-color: rgba(242, 222, 176, 0.7);
+}
+
+.welcome-enter-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.welcome-enter-btn svg {
+  color: var(--color-gold-light);
+  transition: transform 0.3s ease;
+}
+
+.welcome-enter-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Nombres de los novios en el pie */
+.welcome-couple-tag {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-stone-muted);
+  opacity: 0.85;
+}

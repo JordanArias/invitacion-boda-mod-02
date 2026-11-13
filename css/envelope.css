@@ -1,0 +1,210 @@
+/* ==========================================================================
+   ENVELOPE.CSS - PANTALLA INICIAL DE SOBRE & SELLO DE CERA
+   ========================================================================== */
+
+#envelope-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(29, 35, 25, 0.96);
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.envelope-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background-color: #FAF6EE;
+  border-radius: 1.25rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(194, 166, 115, 0.15);
+  padding: 2.25rem 1.75rem;
+  border: 4px solid rgba(200, 178, 130, 0.55);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 520px;
+  box-sizing: border-box;
+}
+
+.envelope-top-sub {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: #786C57;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.envelope-gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--gold-accent);
+  margin-bottom: 0.5rem;
+}
+
+.envelope-gold-divider span.line {
+  height: 1px;
+  width: 32px;
+  background-color: rgba(194, 166, 115, 0.6);
+}
+
+.envelope-couple-names {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  letter-spacing: 0.05em;
+  color: var(--olive-dark);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 0.25rem;
+}
+
+.envelope-script-sub {
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  color: #8D7953;
+  margin-top: -0.25rem;
+}
+
+/* Sello de Cera Central */
+.wax-seal-wrapper {
+  margin: 1.75rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wax-seal-btn {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  user-select: none;
+}
+
+.wax-seal-btn:hover {
+  transform: scale(1.08);
+}
+
+.wax-seal-inner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 235, 184, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wax-seal-monogram {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #F7E3B5;
+  letter-spacing: 0.15em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.wax-seal-date {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: #EED195;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.wax-pulse-ring {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 1px solid rgba(194, 166, 115, 0.35);
+  animation: pingRing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes pingRing {
+  75%, 100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Botón «Toca Para Abrir» */
+.envelope-open-btn {
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  border-radius: 9999px;
+  background-color: var(--olive-muted);
+  color: var(--parchment);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(194, 166, 115, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.envelope-open-btn:hover {
+  background-color: var(--olive-dark);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(223, 201, 158, 0.7);
+}
+
+.envelope-open-btn:active {
+  transform: scale(0.97);
+}
+
+.envelope-date-sub {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #948771;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .envelope-card {
+    max-width: 480px;
+    padding: 3rem 2.5rem;
+    min-height: 560px;
+  }
+
+  .envelope-couple-names {
+    font-size: 2.75rem;
+  }
+
+  .envelope-script-sub {
+    font-size: 2.5rem;
+  }
+}

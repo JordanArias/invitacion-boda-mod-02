@@ -1,0 +1,1369 @@
+/* ==========================================================================
+   INVITATION.CSS - ESTILOS COMPLETOS DE LA INVITACIÓN OLIVIA & DANIEL
+   ========================================================================== */
+
+/* Contenedor Principal a Pantalla Completa (Full-Width, Sin Espacios Laterales) */
+.main-invitation-container {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--parchment);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER DECORATIVO BOTÁNICO
+   ========================================================================== */
+.invitation-header {
+  padding: 1.75rem 1.5rem 0.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.header-garland {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.header-garland svg {
+  width: 110px;
+  height: 40px;
+  color: #4C5C44;
+}
+
+.header-together-tag {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  font-weight: 500;
+  color: var(--olive-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.header-families-tag {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: rgba(61, 74, 54, 0.8);
+  text-transform: uppercase;
+}
+
+.heart-divider {
+  display: flex;
+  justify-content: center;
+  margin: 0.4rem 0;
+  color: var(--olive-muted);
+  font-size: 10px;
+}
+
+.heart-divider-gold {
+  display: flex;
+  justify-content: center;
+  margin: 0.3rem 0;
+  color: var(--gold-accent);
+  font-size: 9px;
+}
+
+.couple-title-main {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+  color: var(--olive-dark);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.couple-script-and {
+  font-family: var(--font-script);
+  font-size: 2.25rem;
+  color: var(--olive-muted);
+  line-height: 0.9;
+  margin: -0.15rem 0;
+  font-weight: 400;
+}
+
+.invite-subtitle {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.28em;
+  color: #716858;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.wedding-script-title {
+  font-family: var(--font-script);
+  font-size: 2.65rem;
+  color: #3B4733;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0.35rem 0;
+}
+
+/* ==========================================================================
+   FOTO PRINCIPAL EN ARCO (ARCH PHOTO)
+   ========================================================================== */
+.couple-portrait-section {
+  padding: 0.75rem 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.arch-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.arch-frame-outer {
+  padding: 0.65rem;
+  border: 1px solid #C5B8A5;
+  background-color: #FAF8F3;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.arch-frame-inner {
+  overflow: hidden;
+  height: 380px;
+  position: relative;
+  border: 1px solid #E4DCCE;
+}
+
+.arch-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.arch-photo-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(29, 35, 25, 0.35) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.botanical-corner-svg {
+  position: absolute;
+  bottom: -1rem;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.botanical-corner-svg.left {
+  left: -0.75rem;
+}
+
+.botanical-corner-svg.right {
+  right: -0.75rem;
+  transform: scaleX(-1);
+}
+
+/* ==========================================================================
+   MENSAJE DE INVITACIÓN
+   ========================================================================== */
+.invitation-text-section {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.getting-married-script {
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  color: var(--olive-muted);
+}
+
+.getting-married-h3 {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  letter-spacing: 0.25em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -0.5rem;
+}
+
+.invitation-body-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: #4F5749;
+  line-height: 1.65;
+  padding: 0 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   BENDICIÓN Y PADRES
+   ========================================================================== */
+.blessing-parents-section {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.blessing-quote-card {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto 1.5rem auto;
+  background-color: #FBF9F4;
+  padding: 1.25rem;
+  border-radius: 0.65rem;
+  border: 1px solid #E1D7C6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.quote-flourish-top {
+  display: flex;
+  justify-content: center;
+  color: var(--gold-accent);
+  margin-bottom: 0.5rem;
+}
+
+.quote-flourish-top svg {
+  width: 32px;
+  height: 16px;
+}
+
+.quote-big-mark {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--gold-accent);
+  display: block;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.blessing-quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14.5px;
+  color: var(--olive-dark);
+  line-height: 1.6;
+  margin-top: -0.5rem;
+}
+
+.parents-block {
+  max-width: 320px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border-sep);
+  border-bottom: 1px solid var(--border-sep);
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.parent-role-tag {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.25em;
+  color: #867B68;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.parent-names {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--olive-dark);
+  font-weight: 500;
+  margin-top: 0.15rem;
+  letter-spacing: 0.03em;
+}
+
+.parent-ampersand {
+  font-size: 0.85rem;
+  color: var(--gold-accent);
+  font-family: var(--font-script);
+  display: block;
+  margin: -0.25rem 0;
+}
+
+/* ==========================================================================
+   SAVE THE DATE & CALENDARIO & CUENTA REGRESIVA
+   ========================================================================== */
+.save-the-date-section {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.save-the-date-title {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  color: #867B68;
+  text-transform: uppercase;
+}
+
+.date-three-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  color: var(--olive-dark);
+}
+
+.date-three-box span.num {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+}
+
+.date-three-box span.star {
+  font-size: 0.85rem;
+  color: var(--gold-accent);
+}
+
+.saturday-sub {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--olive-muted);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* Calendario Noviembre 2025 */
+.calendar-wrapper {
+  max-width: 270px;
+  margin: 0 auto;
+  padding-bottom: 0.75rem;
+  color: var(--olive-dark);
+}
+
+.calendar-header-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 8.5px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #796F5E;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-sep);
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 12px;
+  font-family: var(--font-serif);
+  row-gap: 0.5rem;
+  color: #484236;
+  text-align: center;
+}
+
+.calendar-day-active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-day-active span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--olive-dark);
+  color: #FAEDE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--gold-accent);
+}
+
+/* Cuenta Regresiva */
+.countdown-container {
+  margin: 1.5rem auto 1rem auto;
+  max-width: 320px;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.countdown-item {
+  background: #FAF8F3;
+  border: 1px solid #E1D7C6;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.25rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.countdown-item span.number {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--olive-dark);
+  line-height: 1;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-item span.label {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #867B68;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Botón Google Calendar */
+.calendar-btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: var(--olive-muted);
+  color: var(--parchment);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(194, 166, 115, 0.4);
+  margin-top: 1rem;
+  transition: all 0.25s ease;
+}
+
+.calendar-btn-link:hover {
+  background-color: var(--olive-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* ==========================================================================
+   BANNER FOTO NOCTURNA
+   ========================================================================== */
+.night-photo-break {
+  position: relative;
+  height: 176px;
+  width: 100%;
+  overflow: hidden;
+  margin: 1.25rem 0;
+  border-top: 1px solid #D0C6B3;
+  border-bottom: 1px solid #D0C6B3;
+}
+
+.night-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.72) contrast(1.1);
+}
+
+.night-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(29, 35, 25, 0.38);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.night-photo-overlay .with-love-script {
+  font-family: var(--font-script);
+  font-size: 1.85rem;
+  color: #F3EBDE;
+}
+
+.night-photo-overlay .names-tag {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.25em;
+  color: #FAF6EE;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+/* ==========================================================================
+   ITINERARIO (WEDDING PROGRAM)
+   ========================================================================== */
+.wedding-program-section {
+  padding: 1.5rem 1.5rem;
+}
+
+.program-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.laurel-branch-svg {
+  display: flex;
+  justify-content: center;
+  color: var(--gold-accent);
+  margin-bottom: 0.25rem;
+}
+
+.laurel-branch-svg svg {
+  width: 40px;
+  height: 28px;
+}
+
+.program-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  letter-spacing: 0.2em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+
+.program-script {
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  color: var(--olive-muted);
+  margin-top: -0.25rem;
+}
+
+/* Timeline con línea guía vertical */
+.timeline-container {
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.timeline-guide-line {
+  position: absolute;
+  left: 24px;
+  top: 16px;
+  bottom: 16px;
+  width: 1px;
+  background: linear-gradient(to bottom, #C5B597, #94876F, #C5B597);
+}
+
+.timeline-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.timeline-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--olive-dark);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(194, 166, 115, 0.4);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.timeline-icon-badge img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.timeline-icon-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+.timeline-time {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--olive-dark);
+}
+
+.timeline-desc {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #525E4C;
+}
+
+.timeline-heart-sep {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 22px;
+  margin: -0.75rem 0;
+  color: var(--gold-accent);
+  font-size: 8px;
+  z-index: 10;
+  position: relative;
+}
+
+/* ==========================================================================
+   CÓDIGO DE VESTIMENTA (DRESS CODE)
+   ========================================================================== */
+.dress-code-section {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.torn-edge-spacer-top {
+  width: 100%;
+  height: 16px;
+  background-color: var(--olive-card);
+  margin-bottom: -1px;
+}
+
+.torn-edge-spacer-bottom {
+  width: 100%;
+  height: 16px;
+  background-color: var(--olive-card);
+  margin-top: -1px;
+}
+
+.dress-code-content {
+  background-color: var(--olive-card);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #F7F2EA;
+}
+
+.dress-code-h3 {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.swatches-palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.swatch-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease;
+}
+
+.swatch-circle:hover {
+  transform: scale(1.15);
+}
+
+.swatch-1 { background-color: #F4EFE6; border: 1px solid #E2D5C0; }
+.swatch-2 { background-color: #A9B299; border: 1px solid #919C7E; }
+.swatch-3 { background-color: #6A7659; border: 1px solid #5A6549; }
+.swatch-4 { background-color: #8E7B6C; border: 1px solid #7B695A; }
+.swatch-5 { background-color: #2D3627; border: 1px solid #1E241A; }
+
+.gift-registry-text {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: #E6DED0;
+  max-width: 280px;
+  margin: 1rem auto 0 auto;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.botanical-gold-flourish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  color: var(--gold-accent);
+  opacity: 0.9;
+}
+
+.botanical-gold-flourish span.line {
+  width: 32px;
+  height: 1px;
+  background-color: rgba(194, 166, 115, 0.5);
+}
+
+.botanical-gold-flourish svg {
+  width: 24px;
+  height: 16px;
+}
+
+/* ==========================================================================
+   FRASE ROMÁNTICA
+   ========================================================================== */
+.quote-section {
+  text-align: center;
+  padding: 1.25rem 2rem;
+  margin: 0.5rem 0;
+}
+
+.quote-section blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--olive-dark);
+  max-width: 280px;
+  margin: -0.5rem auto 0 auto;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   UBICACIONES (TWO VENUES)
+   ========================================================================== */
+.venues-section {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.venues-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  letter-spacing: 0.25em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.venues-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-style: italic;
+  color: #596653;
+  max-width: 280px;
+  margin: 0.25rem auto 1.5rem auto;
+}
+
+.venues-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 330px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.venue-card {
+  border-radius: 0.85rem;
+  background-color: #FAF7F0;
+  border: 1px solid #D8CDBA;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.venue-card:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+.venue-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #E2D8C9;
+  padding-bottom: 0.75rem;
+}
+
+.venue-header-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--olive-dark);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.venue-header-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.venue-category-tag {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.25em;
+  color: #867B68;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.venue-card-h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--olive-dark);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.venue-place-name {
+  font-family: var(--font-script);
+  font-size: 1.85rem;
+  color: var(--olive-muted);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.venue-time-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #484236;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.venue-time-badge svg {
+  width: 14px;
+  height: 14px;
+  color: var(--gold-accent);
+}
+
+.venue-address-text {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: #596653;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: 0.35rem;
+}
+
+.venue-photo-wrap {
+  margin: 0.65rem 0;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  border: 1px solid #CEC3B0;
+  background-color: #FFFFFF;
+  padding: 4px;
+}
+
+.venue-photo-inner {
+  height: 130px;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.venue-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.04);
+}
+
+.venue-map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: 0.35rem;
+  background-color: var(--olive-muted);
+  color: #F5EFE3;
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(194, 166, 115, 0.4);
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.venue-map-link:hover {
+  background-color: var(--olive-dark);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   GALERÍA (GALLERY)
+   ========================================================================== */
+.gallery-section {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  letter-spacing: 0.25em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.gallery-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  max-width: 320px;
+  margin: 1rem auto 0 auto;
+}
+
+.gallery-thumb-item {
+  height: 130px;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #DFD6C7;
+  padding: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.gallery-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-thumb-item:hover .gallery-thumb-img {
+  transform: scale(1.08);
+}
+
+.view-more-photos-btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.35rem;
+  background-color: var(--olive-muted);
+  color: #F5EFE3;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(194, 166, 115, 0.4);
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.view-more-photos-btn:hover {
+  background-color: var(--olive-dark);
+}
+
+/* ==========================================================================
+   WEBSITE & QR CODE
+   ========================================================================== */
+.website-qr-section {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.website-qr-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  letter-spacing: 0.2em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.website-qr-desc {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #596653;
+  max-width: 260px;
+  margin: 0.5rem auto 1rem auto;
+  line-height: 1.4;
+}
+
+.qr-box-card {
+  display: inline-block;
+  padding: 0.75rem;
+  background-color: #FFFFFF;
+  border: 1px solid #CDBFAB;
+  border-radius: 0.85rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.75rem;
+}
+
+.qr-box-card svg,
+.qr-box-card img {
+  width: 144px;
+  height: 144px;
+  object-fit: contain;
+}
+
+.website-link-text {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--olive-muted);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   CONFIRMAR ASISTENCIA (RSVP)
+   ========================================================================== */
+.rsvp-section {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.rsvp-box-card {
+  max-width: 340px;
+  margin: 0 auto;
+  background-color: #FAF7F0;
+  border: 1px solid #D8CDBA;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.rsvp-botanical-top {
+  display: flex;
+  justify-content: center;
+  color: var(--gold-accent);
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-botanical-top svg {
+  width: 44px;
+  height: 22px;
+}
+
+.rsvp-title-main {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  letter-spacing: 0.25em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.rsvp-script-sub {
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  color: var(--olive-muted);
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-instructions {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #4F5749;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.whatsapp-rsvp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #128C7E;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(18, 140, 126, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+}
+
+.whatsapp-rsvp-btn:hover {
+  background-color: #075E54;
+  transform: translateY(-2px);
+}
+
+.whatsapp-rsvp-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.toggle-rsvp-form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #D8CDBA;
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #716858;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle-rsvp-form-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Formulario Online */
+.rsvp-online-form {
+  margin-top: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rsvp-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #6C614E;
+  margin-bottom: 0.25rem;
+}
+
+.rsvp-input,
+.rsvp-select,
+.rsvp-textarea {
+  width: 100%;
+  border-radius: 0.35rem;
+  border: 1px solid #C5B8A5;
+  background-color: #FFFFFF;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.85rem;
+  font-family: var(--font-serif);
+  color: var(--olive-dark);
+  box-sizing: border-box;
+}
+
+.rsvp-input:focus,
+.rsvp-select:focus,
+.rsvp-textarea:focus {
+  outline: none;
+  border-color: var(--olive-dark);
+  box-shadow: 0 0 0 1px var(--olive-dark);
+}
+
+.rsvp-submit-btn {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: 0.35rem;
+  background-color: var(--olive-muted);
+  color: var(--parchment);
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(194, 166, 115, 0.4);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.rsvp-submit-btn:hover {
+  background-color: var(--olive-dark);
+}
+
+/* ==========================================================================
+   BANNER DE CIERRE (FINAL CLOSING BANNER)
+   ========================================================================== */
+.final-closing-footer {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.final-closing-box {
+  height: 256px;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-closing-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.final-closing-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--olive-deep) 0%, rgba(29, 35, 25, 0.5) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: center;
+}
+
+.final-thankyou-script {
+  font-family: var(--font-script);
+  font-size: 2.75rem;
+  color: var(--gold-light);
+  margin-bottom: 0.25rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.final-cant-wait-text {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #EEE3D1;
+  font-weight: 300;
+  max-width: 220px;
+}
+
+.final-date-tag {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold-accent);
+  font-size: 12px;
+}
+
+.final-date-tag span.date {
+  font-family: var(--font-serif);
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  color: #DAC7A3;
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE DE MÚSICA FIXED (MUSIC.GIF)
+   ========================================================================== */
+.floating-music-btn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 90;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(247, 244, 238, 0.95);
+  border: 2px solid var(--gold-accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.floating-music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  border-color: var(--gold-light);
+}
+
+.floating-music-btn.is-paused {
+  opacity: 0.7;
+  filter: grayscale(0.8);
+}
+
+.floating-music-btn.is-playing {
+  opacity: 1;
+  filter: none;
+}
+
+.floating-music-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   MODAL LIGHTBOX
+   ========================================================================== */
+#gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+#lightbox-img {
+  max-width: 95%;
+  max-height: 88vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+}

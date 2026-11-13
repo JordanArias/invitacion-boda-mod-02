@@ -1,0 +1,766 @@
+/* ==========================================================================
+   RESPONSIVE.CSS - PANTALLA COMPLETA TOTAL (MÓVIL, TABLET Y PANTALLA SETUP / PC)
+   Boda Olivia & Daniel - Sin espacios laterales ni bordes vacíos
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   REGLAS BASE DE PANTALLA COMPLETA (EDGE-TO-EDGE)
+   -------------------------------------------------------------------------- */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  background-color: var(--parchment) !important;
+  overflow-x: hidden !important;
+  display: block !important;
+}
+
+.main-invitation-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-left: none !important;
+  border-right: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. TELÉFONOS MÓVILES (< 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .invitation-header {
+    padding: 2rem 1.25rem 0.5rem 1.25rem;
+  }
+
+  .couple-title-main {
+    font-size: 2.6rem;
+  }
+
+  .couple-script-and {
+    font-size: 2.25rem;
+  }
+
+  .wedding-script-title {
+    font-size: 2.65rem;
+  }
+
+  .arch-photo-wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .arch-frame-inner {
+    height: 380px;
+  }
+
+  .blessing-quote-card,
+  .parents-block,
+  .calendar-wrapper,
+  .countdown-container,
+  .timeline-container,
+  .venues-cards-stack,
+  .gallery-grid-2x2,
+  .rsvp-box-card {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery-grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .save-the-date-content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. PANTALLAS TABLET (768px – 1023px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .invitation-header {
+    padding: 3rem 2rem 1.25rem 2rem;
+  }
+
+  .couple-title-main {
+    font-size: 3.6rem;
+  }
+
+  .couple-script-and {
+    font-size: 3rem;
+  }
+
+  .wedding-script-title {
+    font-size: 3.6rem;
+  }
+
+  .arch-photo-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .arch-frame-inner {
+    height: 480px;
+  }
+
+  .invitation-body-quote {
+    max-width: 580px;
+    font-size: 1.2rem;
+    margin: 0.75rem auto 0 auto;
+  }
+
+  /* Cita de Bendición y Padres */
+  .blessing-quote-card {
+    max-width: 700px;
+    padding: 2rem 2.5rem;
+    margin: 0 auto 2rem auto;
+  }
+
+  .blessing-quote-text {
+    font-size: 1.1rem;
+  }
+
+  /* Padres en 3 Columnas */
+  .parents-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    align-items: center;
+  }
+
+  .parent-divider {
+    display: none;
+  }
+
+  .parent-names {
+    font-size: 1.3rem;
+  }
+
+  /* Save the Date Lado a Lado */
+  .save-the-date-content-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: 760px;
+    margin: 2rem auto 0 auto;
+  }
+
+  .calendar-wrapper {
+    margin: 0;
+    max-width: 320px;
+  }
+
+  .countdown-container {
+    margin: 0;
+    width: 340px;
+  }
+
+  /* Banner nocturno a todo el ancho */
+  .night-photo-break {
+    height: 240px;
+    margin: 2.5rem 0;
+  }
+
+  .night-photo-overlay .with-love-script {
+    font-size: 2.4rem;
+  }
+
+  .night-photo-overlay .names-tag {
+    font-size: 1.5rem;
+  }
+
+  /* Itinerario Alternado con guía central */
+  .timeline-container {
+    max-width: 650px;
+    margin: 2.5rem auto 0 auto;
+  }
+
+  .timeline-guide-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-items-list {
+    gap: 2rem;
+  }
+
+  .timeline-row {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .timeline-row:nth-child(4n+1) {
+    margin-right: auto;
+    padding-right: 2.5rem;
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .timeline-row:nth-child(4n+3) {
+    margin-left: auto;
+    padding-left: 2.5rem;
+    text-align: left;
+  }
+
+  .timeline-heart-sep {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  /* Dress code amplio */
+  .dress-code-content {
+    padding: 3.5rem 2rem;
+  }
+
+  .gift-registry-text {
+    max-width: 600px;
+    font-size: 1.15rem;
+  }
+
+  /* Ubicaciones en 2 Columnas */
+  .venues-cards-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .venue-photo-inner {
+    height: 160px;
+  }
+
+  /* Galería en 4 Columnas horizontales */
+  .gallery-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 760px;
+    margin: 1.5rem auto 0 auto;
+  }
+
+  .gallery-thumb-item {
+    height: 180px;
+  }
+
+  /* RSVP */
+  .rsvp-box-card {
+    max-width: 600px;
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+  }
+
+  .final-closing-box {
+    height: 320px;
+  }
+
+  .final-thankyou-script {
+    font-size: 3.8rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. PANTALLAS SETUP / PC / DESKTOP (min-width: 1024px)
+   EXPERIENCIA COMPLETA EDGE-TO-EDGE
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Encabezado */
+  .invitation-header {
+    padding: 4rem 2rem 1.5rem 2rem;
+  }
+
+  .couple-title-main {
+    font-size: 4.8rem;
+    letter-spacing: 0.1em;
+  }
+
+  .couple-script-and {
+    font-size: 3.6rem;
+  }
+
+  .wedding-script-title {
+    font-size: 4.4rem;
+  }
+
+  /* Retrato en Arco */
+  .arch-photo-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .arch-frame-inner {
+    height: 540px;
+  }
+
+  .invitation-body-quote {
+    max-width: 680px;
+    font-size: 1.3rem;
+    margin: 1rem auto 0 auto;
+    line-height: 1.75;
+  }
+
+  /* Bendición y Padres */
+  .blessing-quote-card {
+    max-width: 860px;
+    padding: 2.5rem 3rem;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .blessing-quote-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .parents-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    align-items: center;
+  }
+
+  .parent-divider {
+    display: none;
+  }
+
+  .parent-role-tag {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+  }
+
+  .parent-names {
+    font-size: 1.45rem;
+    margin-top: 0.35rem;
+  }
+
+  /* Save the Date Lado a Lado */
+  .save-the-date-section {
+    padding: 4.5rem 2rem;
+  }
+
+  .save-the-date-title {
+    font-size: 13px;
+    letter-spacing: 0.35em;
+  }
+
+  .date-three-box span.num {
+    font-size: 2.75rem;
+  }
+
+  .save-the-date-content-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    max-width: 1000px;
+    margin: 2.5rem auto 0 auto;
+  }
+
+  .calendar-wrapper {
+    margin: 0;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  .calendar-header-grid {
+    font-size: 11px;
+    padding-bottom: 0.5rem;
+  }
+
+  .calendar-days-grid {
+    font-size: 15px;
+    row-gap: 0.85rem;
+  }
+
+  .calendar-day-active span {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .countdown-container {
+    margin: 0;
+    width: 400px;
+  }
+
+  .countdown-grid {
+    gap: 0.85rem;
+  }
+
+  .countdown-item {
+    padding: 1rem 0.5rem;
+  }
+
+  .countdown-item span.number {
+    font-size: 2.4rem;
+  }
+
+  .countdown-item span.label {
+    font-size: 10px;
+    margin-top: 0.4rem;
+  }
+
+  .calendar-btn-link {
+    padding: 0.95rem 2.25rem;
+    font-size: 10.5px;
+    margin-top: 1.5rem;
+  }
+
+  /* Banner nocturno edge-to-edge */
+  .night-photo-break {
+    height: 300px;
+    margin: 3.5rem 0;
+  }
+
+  .night-photo-overlay .with-love-script {
+    font-size: 3rem;
+  }
+
+  .night-photo-overlay .names-tag {
+    font-size: 1.85rem;
+    letter-spacing: 0.35em;
+  }
+
+  /* Itinerario Alternado */
+  .wedding-program-section {
+    padding: 4.5rem 2rem;
+  }
+
+  .program-title {
+    font-size: 2.4rem;
+    letter-spacing: 0.25em;
+  }
+
+  .program-script {
+    font-size: 2.8rem;
+  }
+
+  .timeline-container {
+    max-width: 820px;
+    margin: 3rem auto 0 auto;
+  }
+
+  .timeline-guide-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-items-list {
+    gap: 2.25rem;
+  }
+
+  .timeline-row {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .timeline-row:nth-child(4n+1) {
+    margin-right: auto;
+    padding-right: 3rem;
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .timeline-row:nth-child(4n+3) {
+    margin-left: auto;
+    padding-left: 3rem;
+    text-align: left;
+  }
+
+  .timeline-heart-sep {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .timeline-time {
+    font-size: 1.35rem;
+  }
+
+  .timeline-desc {
+    font-size: 1rem;
+  }
+
+  .timeline-icon-badge {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-icon-badge img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Dress code edge-to-edge */
+  .dress-code-section {
+    margin: 4.5rem 0;
+  }
+
+  .torn-edge-spacer-top,
+  .torn-edge-spacer-bottom {
+    height: 24px;
+  }
+
+  .dress-code-content {
+    padding: 4.5rem 2.5rem;
+  }
+
+  .dress-code-h3 {
+    font-size: 14px;
+    letter-spacing: 0.4em;
+  }
+
+  .swatches-palette {
+    gap: 1.75rem;
+    margin: 1.75rem 0;
+  }
+
+  .swatch-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .gift-registry-text {
+    max-width: 680px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  /* Cita Romántica */
+  .quote-section {
+    padding: 4rem 2rem;
+  }
+
+  .quote-section blockquote {
+    max-width: 720px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  /* Ubicaciones en 2 Columnas amplias */
+  .venues-section {
+    padding: 4.5rem 2rem;
+  }
+
+  .venues-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+  }
+
+  .venues-subtitle {
+    max-width: 650px;
+    font-size: 1.15rem;
+    margin: 0.5rem auto 2.5rem auto;
+  }
+
+  .venues-cards-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.75rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .venue-card {
+    padding: 2.25rem;
+    border-radius: 1.25rem;
+  }
+
+  .venue-place-name {
+    font-size: 2.4rem;
+  }
+
+  .venue-time-badge {
+    font-size: 1.05rem;
+  }
+
+  .venue-address-text {
+    font-size: 13.5px;
+  }
+
+  .venue-photo-inner {
+    height: 190px;
+  }
+
+  .venue-map-link {
+    padding: 0.85rem 1.5rem;
+    font-size: 10.5px;
+    margin-top: 1.25rem;
+  }
+
+  /* Galería en 4 Columnas panorámicas */
+  .gallery-section {
+    padding: 4.5rem 2rem;
+  }
+
+  .gallery-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+  }
+
+  .gallery-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+  }
+
+  .gallery-thumb-item {
+    height: 240px;
+    border-radius: 0.75rem;
+    padding: 5px;
+  }
+
+  .view-more-photos-btn {
+    padding: 0.85rem 2.25rem;
+    font-size: 11px;
+    margin-top: 2rem;
+  }
+
+  /* Website & QR */
+  .website-qr-section {
+    padding: 4rem 2rem;
+  }
+
+  .website-qr-title {
+    font-size: 1.9rem;
+    letter-spacing: 0.25em;
+  }
+
+  .website-qr-desc {
+    max-width: 480px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
+  .qr-box-card {
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+  }
+
+  .qr-box-card svg,
+  .qr-box-card img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .website-link-text {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+
+  /* RSVP */
+  .rsvp-section {
+    padding: 4.5rem 2rem;
+  }
+
+  .rsvp-box-card {
+    max-width: 680px;
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .rsvp-title-main {
+    font-size: 2.2rem;
+    letter-spacing: 0.3em;
+  }
+
+  .rsvp-script-sub {
+    font-size: 2.75rem;
+  }
+
+  .rsvp-instructions {
+    font-size: 1.15rem;
+    max-width: 520px;
+    margin: 0 auto 1.75rem auto;
+    line-height: 1.7;
+  }
+
+  .whatsapp-rsvp-btn {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 1rem 1.75rem;
+    font-size: 11.5px;
+  }
+
+  .toggle-rsvp-form-btn {
+    max-width: 420px;
+    margin: 1.25rem auto 0 auto;
+    font-size: 10px;
+  }
+
+  .rsvp-online-form {
+    max-width: 480px;
+    margin: 1.5rem auto 0 auto;
+  }
+
+  /* Banner de Cierre edge-to-edge */
+  .final-closing-footer {
+    margin-top: 3.5rem;
+  }
+
+  .final-closing-box {
+    height: 400px;
+  }
+
+  .final-thankyou-script {
+    font-size: 4.8rem;
+  }
+
+  .final-cant-wait-text {
+    font-size: 14px;
+    max-width: 340px;
+  }
+
+  .final-date-tag span.date {
+    font-size: 14px;
+    letter-spacing: 0.25em;
+  }
+
+  /* Botón Flotante de Música */
+  .floating-music-btn {
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. MONITORES WIDESCREEN (min-width: 1440px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .parents-block,
+  .save-the-date-content-wrap,
+  .venues-cards-stack {
+    max-width: 1200px;
+  }
+
+  .gallery-grid-2x2 {
+    max-width: 1300px;
+    gap: 1.75rem;
+  }
+
+  .gallery-thumb-item {
+    height: 270px;
+  }
+}

@@ -1,0 +1,40 @@
+# PROMPT TÉCNICO – INVITACIÓN DE BODA OLIVIA & DANIEL
+
+Desarrolla la web de invitación de boda **Olivia & Daniel**, utilizando el archivo HTML proporcionado y la captura de pantalla como referencia visual principal.
+
+### Diseño
+- Mantén fielmente el diseño: elegante, romántico y minimalista.
+- Paleta: verde oliva oscuro, beige papel y detalles dorados.
+- Conserva tipografías, proporciones, ornamentos, tarjetas y distribución de secciones.
+- Diseño completamente responsive para móviles y computadoras.
+- Reproduce las animaciones y transiciones de forma fluida y sutil.
+
+### Funcionalidades
+- Pantalla inicial con sobre y sello de cera animado. Al pulsar «Toca para abrir», revelar la invitación.
+- Reproductor de música MP3 con controles de reproducción.
+- Galería de fotografías funcional con ampliación de imágenes.
+- Itinerario con sus respectivos iconos.
+- Cuenta regresiva para la fecha de boda.
+- Enlaces funcionales a Google Maps y Google Calendar.
+- Código QR real que dirija a la invitación.
+- Confirmación de asistencia mediante WhatsApp y formulario funcional.
+- Botones e interacciones completamente operativos.
+
+### Recursos
+- `img/`: fotografías de la boda.
+- `iconos/`: iconos e imágenes decorativas.
+- `music/`: archivo MP3.
+
+Utiliza los recursos proporcionados, conserva sus nombres y evita imágenes aleatorias externas.
+
+### Tecnología y estructura
+- HTML5, CSS3 y JavaScript puro (Vanilla JS).
+- No utilizar React, Angular, Vue ni frameworks pesados.
+- No depender de Tailwind CDN; implementar los estilos en CSS propio.
+- Código limpio, modular y fácil de mantener.
+- Centralizar nombres, fechas, horarios, ubicaciones, WhatsApp y demás datos editables en un archivo de configuración.
+
+### Entrega
+Organiza el proyecto en carpetas `css`, `js`, `img`, `iconos` y `music`. Mantén todos los recursos locales y prepara la web para publicarse directamente desde GitHub a Netlify, sin procesos de compilación.
+
+**IMPORTANTE:** No rediseñes la página ni inventes secciones nuevas. Utiliza el HTML y la captura proporcionados como base, mejora su funcionamiento y conserva la identidad visual del diseño original. Verifica todos los botones, enlaces, animaciones y funcionalidades antes de finalizar.
