@@ -119,7 +119,8 @@
   overflow: visible;
 }
 
-.arch-photo-wrapper {
+.arch-photo-wrapper,
+.arch-portrait-wrapper {
   position: relative;
   width: 100%;
   max-width: 320px;
@@ -1442,7 +1443,7 @@
 .section-floral-corner {
   position: absolute;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   line-height: 0;
   user-select: none;
   margin: 0;
@@ -1461,34 +1462,34 @@
   top: 0;
   left: 0;
   transform: none;
-  transform-origin: top left;
+  transform-origin: center;
 }
 
 .section-floral-corner.top-right {
   top: 0;
   right: 0;
   transform: scaleX(-1);
-  transform-origin: top right;
+  transform-origin: center;
 }
 
 .section-floral-corner.bottom-left {
   bottom: 0;
   left: 0;
   transform: scaleY(-1);
-  transform-origin: bottom left;
+  transform-origin: center;
 }
 
 .section-floral-corner.bottom-right {
   bottom: 0;
   right: 0;
   transform: scale(-1);
-  transform-origin: bottom right;
+  transform-origin: center;
 }
 
 /* Flores en las esquinas inferiores del marco de foto de novios */
 .arch-floral-corner {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   z-index: 4;
   pointer-events: none;
   line-height: 0;
@@ -1497,20 +1498,21 @@
 }
 
 .arch-floral-corner.left {
-  left: 0;
+  left: -12px;
   transform: scaleY(-1);
-  transform-origin: bottom left;
+  transform-origin: center;
 }
 
 .arch-floral-corner.right {
-  right: 0;
+  right: -12px;
   transform: scale(-1);
-  transform-origin: bottom right;
+  transform-origin: center;
 }
 
 .arch-floral-corner img {
-  width: 135px;
+  width: 115px;
   height: auto;
   display: block;
+  object-fit: contain;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
 }

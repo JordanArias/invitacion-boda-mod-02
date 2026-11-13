@@ -76,10 +76,12 @@ main,
     font-size: 2.65rem;
   }
 
-  .arch-photo-wrapper {
+  .arch-photo-wrapper,
+  .arch-portrait-wrapper {
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
   }
 
   .arch-frame-inner {
@@ -153,23 +155,23 @@ main,
   }
 
   .section-floral-corner img {
-    width: 125px;
+    width: 120px;
   }
 
   .arch-floral-corner {
-    bottom: 0;
+    bottom: -10px;
   }
 
   .arch-floral-corner.left {
-    left: 0;
+    left: -12px;
   }
 
   .arch-floral-corner.right {
-    right: 0;
+    right: -12px;
   }
 
   .arch-floral-corner img {
-    width: 115px;
+    width: 110px;
   }
 }
 
@@ -194,10 +196,12 @@ main,
     font-size: 3.6rem;
   }
 
-  .arch-photo-wrapper {
+  .arch-photo-wrapper,
+  .arch-portrait-wrapper {
     max-width: 440px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
   }
 
   .arch-frame-inner {
@@ -441,23 +445,23 @@ main,
   }
 
   .section-floral-corner img {
-    width: 190px;
+    width: 175px;
   }
 
   .arch-floral-corner {
-    bottom: 0;
+    bottom: -14px;
   }
 
   .arch-floral-corner.left {
-    left: 0;
+    left: -16px;
   }
 
   .arch-floral-corner.right {
-    right: 0;
+    right: -16px;
   }
 
   .arch-floral-corner img {
-    width: 170px;
+    width: 155px;
   }
 }
 
@@ -499,10 +503,12 @@ main,
     justify-content: center;
   }
 
-  .arch-photo-wrapper {
+  .arch-photo-wrapper,
+  .arch-portrait-wrapper {
     max-width: 540px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
   }
 
   .arch-frame-inner {
@@ -1025,23 +1031,23 @@ main,
   }
 
   .section-floral-corner img {
-    width: 260px;
+    width: 220px;
   }
 
   .arch-floral-corner {
-    bottom: 0;
+    bottom: -16px;
   }
 
   .arch-floral-corner.left {
-    left: 0;
+    left: -20px;
   }
 
   .arch-floral-corner.right {
-    right: 0;
+    right: -20px;
   }
 
   .arch-floral-corner img {
-    width: 210px;
+    width: 185px;
   }
 }
 
@@ -1092,10 +1098,22 @@ main,
   }
 
   .section-floral-corner img {
-    width: 300px;
+    width: 260px;
+  }
+
+  .arch-floral-corner {
+    bottom: -18px;
+  }
+
+  .arch-floral-corner.left {
+    left: -24px;
+  }
+
+  .arch-floral-corner.right {
+    right: -24px;
   }
 
   .arch-floral-corner img {
-    width: 250px;
+    width: 215px;
   }
 }
