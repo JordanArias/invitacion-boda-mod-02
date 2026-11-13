@@ -23,15 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (_) {}
     }
 
-    // Efecto suave de escala y desvanecimiento
+    // Efecto suave de escala, difuminado y desvanecimiento
     if (envelopeScreen) {
+      envelopeScreen.style.transition =
+        "opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1.5s ease";
+      envelopeScreen.style.filter = "blur(12px)";
       envelopeScreen.style.opacity = "0";
       envelopeScreen.style.transform = "scale(1.08)";
       envelopeScreen.style.pointerEvents = "none";
 
+      window.dispatchEvent(new CustomEvent("envelopeOpened"));
+
       setTimeout(() => {
         envelopeScreen.classList.add("hidden");
-      }, 950);
+      }, 1550);
     }
 
     // Disparar reproducción de música con el gesto del usuario

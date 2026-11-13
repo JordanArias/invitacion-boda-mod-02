@@ -1,84 +1,224 @@
 /**
  * ==========================================================================
- * INVITATION.JS - FUNCIONALIDADES GENERALES DE LA INVITACIÓN
- * Proyecto: Boda Andrés & Margot (invitacion.html)
+ * INVITATION.JS - TRANSICIONES Y REVELADO CINEMÁTICO SUAVE (DIFUMINADO)
+ * BODA OLIVIA & DANIEL
  * ==========================================================================
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* --------------------------------------------------------------------------
-     FLORES FLOTANTES MECIDAS POR EL VIENTO (iconos/flower.png)
-     20 instancias orgánicas distribuidas a lo largo de la página
-     -------------------------------------------------------------------------- */
-  const flowerContainer = document.getElementById("floating-flowers-container");
+  const mainContainer = document.querySelector(".main-invitation-container");
+  const envelope = document.getElementById("envelope-screen");
+  const isEnvelopePresent = envelope && !envelope.classList.contains("hidden");
 
-  if (flowerContainer) {
-    const flowerConfigs = [
-      { topPercent: 2.0, left: "clamp(8px, 4vw, 42px)", size: 38, opacity: 0.65, anim: "windBreeze1", duration: 7.5, delay: 0, speedX: 0.08, speedY: 0.12 },
-      { topPercent: 7.0, right: "clamp(10px, 4.5vw, 48px)", size: 44, opacity: 0.58, anim: "windBreeze2", duration: 9.0, delay: 1.2, speedX: -0.10, speedY: -0.14 },
-      { topPercent: 12.0, left: "clamp(14px, 5.2vw, 55px)", size: 30, opacity: 0.62, anim: "windBreeze3", duration: 6.8, delay: 0.5, speedX: 0.11, speedY: 0.15 },
-      { topPercent: 17.5, right: "clamp(8px, 3.8vw, 40px)", size: 42, opacity: 0.52, anim: "windBreeze4", duration: 8.5, delay: 2.0, speedX: -0.07, speedY: -0.11 },
-      { topPercent: 22.5, left: "clamp(10px, 4vw, 44px)", size: 34, opacity: 0.68, anim: "windBreeze1", duration: 7.2, delay: 1.5, speedX: 0.09, speedY: 0.13 },
-      { topPercent: 27.5, right: "clamp(12px, 4.8vw, 50px)", size: 36, opacity: 0.55, anim: "windBreeze2", duration: 8.0, delay: 0.8, speedX: -0.11, speedY: -0.16 },
-      { topPercent: 33.0, left: "clamp(12px, 4.2vw, 45px)", size: 46, opacity: 0.48, anim: "windBreeze3", duration: 9.5, delay: 2.5, speedX: 0.12, speedY: 0.10 },
-      { topPercent: 38.0, right: "clamp(6px, 3.2vw, 36px)", size: 28, opacity: 0.64, anim: "windBreeze4", duration: 6.5, delay: 0.3, speedX: -0.08, speedY: -0.12 },
-      { topPercent: 43.0, left: "clamp(10px, 4.6vw, 48px)", size: 40, opacity: 0.56, anim: "windBreeze1", duration: 8.2, delay: 1.8, speedX: 0.10, speedY: 0.14 },
-      { topPercent: 48.0, right: "clamp(8px, 4vw, 42px)", size: 32, opacity: 0.60, anim: "windBreeze2", duration: 7.0, delay: 1.0, speedX: -0.12, speedY: -0.15 },
-      { topPercent: 53.0, left: "clamp(6px, 3.2vw, 35px)", size: 42, opacity: 0.50, anim: "windBreeze3", duration: 8.8, delay: 2.2, speedX: 0.07, speedY: 0.11 },
-      { topPercent: 58.5, right: "clamp(10px, 4.5vw, 48px)", size: 36, opacity: 0.62, anim: "windBreeze4", duration: 7.6, delay: 0.7, speedX: -0.09, speedY: -0.13 },
-      { topPercent: 64.0, left: "clamp(14px, 5vw, 52px)", size: 30, opacity: 0.58, anim: "windBreeze1", duration: 6.8, delay: 1.4, speedX: 0.11, speedY: 0.16 },
-      { topPercent: 69.0, right: "clamp(8px, 3.6vw, 38px)", size: 44, opacity: 0.52, anim: "windBreeze2", duration: 9.2, delay: 2.8, speedX: -0.10, speedY: -0.12 },
-      { topPercent: 74.5, left: "clamp(10px, 4vw, 42px)", size: 35, opacity: 0.66, anim: "windBreeze3", duration: 7.4, delay: 0.4, speedX: 0.08, speedY: 0.14 },
-      { topPercent: 79.5, right: "clamp(12px, 4.6vw, 48px)", size: 38, opacity: 0.54, anim: "windBreeze4", duration: 8.4, delay: 1.9, speedX: -0.11, speedY: -0.15 },
-      { topPercent: 84.5, left: "clamp(6px, 3.2vw, 34px)", size: 28, opacity: 0.62, anim: "windBreeze1", duration: 6.5, delay: 1.1, speedX: 0.12, speedY: 0.13 },
-      { topPercent: 89.5, right: "clamp(10px, 4vw, 44px)", size: 42, opacity: 0.50, anim: "windBreeze2", duration: 8.7, delay: 2.4, speedX: -0.08, speedY: -0.10 },
-      { topPercent: 94.5, left: "clamp(12px, 4.5vw, 46px)", size: 36, opacity: 0.65, anim: "windBreeze3", duration: 7.8, delay: 0.9, speedX: 0.10, speedY: 0.15 },
-      { topPercent: 98.2, right: "clamp(8px, 3.8vw, 40px)", size: 40, opacity: 0.68, anim: "windBreeze4", duration: 8.1, delay: 1.7, speedX: -0.12, speedY: -0.14 }
-    ];
+  // 1. Activar el difuminado cinematográfico inicial al comienzo
+  if (mainContainer) {
+    mainContainer.classList.add("page-dreamy-entrance");
 
-    const flowerNodes = [];
+    if (!isEnvelopePresent) {
+      // En invitacion.html: Iniciar difuminado suave de aparición al cargar
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          mainContainer.classList.add("page-ready");
+        }, 90);
+      });
+    } else {
+      // En index.html: Iniciar difuminado suave cuando se abre el sobre
+      window.addEventListener(
+        "envelopeOpened",
+        () => {
+          setTimeout(() => {
+            mainContainer.classList.add("page-ready");
+          }, 150);
+        },
+        { once: true }
+      );
+    }
+  }
 
-    flowerConfigs.forEach((cfg) => {
-      const flower = document.createElement("div");
-      flower.className = "floating-flower-item";
-      flower.style.top = `${cfg.topPercent}%`;
-      if (cfg.left) flower.style.left = cfg.left;
-      if (cfg.right) flower.style.right = cfg.right;
-      flower.style.width = `${cfg.size}px`;
-      flower.style.height = `${cfg.size}px`;
-      flower.style.opacity = cfg.opacity;
-      flower.style.animation = `${cfg.anim} ${cfg.duration}s ease-in-out infinite alternate`;
-      flower.style.animationDelay = `${cfg.delay}s`;
+  // 2. Elementos con revelado suave difuminado
+  const revealGroups = [
+    // Encabezado y Retrato Principal (Hero inicial con entrada pausada y difuminada)
+    { selector: ".top-floral-banner", class: "top-floral-reveal", delay: "delay-1" },
+    { selector: ".wedding-main-header", class: "scroll-reveal", delay: "delay-2" },
+    { selector: ".arch-photo-wrapper", class: "scroll-reveal-scale", delay: "delay-3" },
+    { selector: ".arch-floral-corner img", class: "floral-bloom", delay: "delay-4" },
 
-      const img = document.createElement("img");
-      img.src = "iconos/flower.png";
-      img.alt = "";
-      img.setAttribute("aria-hidden", "true");
-      flower.appendChild(img);
+    // Mensaje de invitación
+    { selector: ".invitation-text-section", class: "scroll-reveal", delay: "delay-5" },
 
-      flowerContainer.appendChild(flower);
-      flowerNodes.push({ el: flower, speedX: cfg.speedX, speedY: cfg.speedY });
+    // Cita y Padres
+    { selector: ".blessing-quote-card", class: "scroll-reveal" },
+    { selector: ".parent-card-item", class: "scroll-reveal", stagger: true },
+
+    // Save the Date & Calendario
+    { selector: ".save-the-date-section .section-floral-corner img", class: "floral-bloom" },
+    { selector: ".save-the-date-title", class: "scroll-reveal" },
+    { selector: ".date-three-box", class: "scroll-reveal-scale", delay: "delay-1" },
+    { selector: ".saturday-sub", class: "scroll-reveal", delay: "delay-2" },
+    { selector: ".calendar-wrapper", class: "scroll-reveal", delay: "delay-1" },
+    { selector: ".countdown-container", class: "scroll-reveal", delay: "delay-2" },
+
+    // Foto nocturna
+    { selector: ".night-photo-break", class: "scroll-reveal-scale" },
+
+    // Itinerario (Camino en curva de colina)
+    { selector: ".wedding-program-section .program-header", class: "scroll-reveal" },
+    { selector: ".timeline-row", class: "scroll-reveal", stagger: true },
+
+    // Lugares de Celebración
+    { selector: ".venues-section .section-floral-corner img", class: "floral-bloom" },
+    { selector: ".venues-title", class: "scroll-reveal" },
+    { selector: ".venues-subtitle", class: "scroll-reveal" },
+    { selector: ".venue-card", class: "scroll-reveal", stagger: true },
+
+    // Galería de Recuerdos
+    { selector: ".gallery-section .gallery-title", class: "scroll-reveal" },
+    { selector: ".gallery-thumb-item", class: "scroll-reveal-scale", stagger: true },
+    { selector: ".view-more-photos-btn", class: "scroll-reveal" },
+
+    // Sitio Web y QR
+    { selector: ".website-qr-section", class: "scroll-reveal" },
+
+    // RSVP
+    { selector: ".rsvp-section .section-floral-corner img", class: "floral-bloom" },
+    { selector: ".rsvp-box-card", class: "scroll-reveal-scale" },
+
+    // Cierre
+    { selector: ".closing-blessing-section", class: "scroll-reveal" },
+    { selector: ".final-closing-box", class: "scroll-reveal-scale" }
+  ];
+
+  // 3. Aplicar clases de transición a los elementos encontrados
+  const allTargets = [];
+  revealGroups.forEach((group) => {
+    const nodes = document.querySelectorAll(group.selector);
+    nodes.forEach((node, index) => {
+      node.classList.add(group.class);
+      if (group.delay) {
+        node.classList.add(group.delay);
+      }
+      if (group.stagger) {
+        const staggerIndex = (index % 6) + 1;
+        node.classList.add(`delay-${staggerIndex}`);
+      }
+      allTargets.push(node);
     });
+  });
 
-    // Parallax suave al desplazarse
-    let ticking = false;
+  // Fallback si no hay soporte para IntersectionObserver
+  if (!("IntersectionObserver" in window)) {
+    allTargets.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+
+  // 4. Configurar IntersectionObserver con umbral suave
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px 0px -40px 0px",
+    threshold: 0.08
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Iniciar la observación
+  const startObserving = () => {
+    allTargets.forEach((el) => observer.observe(el));
+  };
+
+  if (!isEnvelopePresent) {
+    // Si la invitación está abierta directamente (invitacion.html)
+    setTimeout(() => {
+      startObserving();
+    }, 150);
+  } else {
+    // Si hay sobre (index.html), esperar a su disolución
     window.addEventListener(
-      "scroll",
+      "envelopeOpened",
       () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-            flowerNodes.forEach((item) => {
-              const yOffset = (scrollY * item.speedY) % 90;
-              const xOffset = (scrollY * item.speedX) % 40;
-              item.el.style.transform = `translate3d(${xOffset}px, ${yOffset}px, 0)`;
-            });
-            ticking = false;
-          });
-          ticking = true;
-        }
+        setTimeout(() => {
+          startObserving();
+        }, 350);
       },
-      { passive: true }
+      { once: true }
     );
   }
+
+  // 5. Trazado del camino en curva dinámico para el Itinerario (Camino en colina)
+  const updateTimelineCurve = () => {
+    const container = document.querySelector(".timeline-container");
+    const badges = document.querySelectorAll(".timeline-icon-badge");
+    const pathDashed = document.querySelector(".timeline-path-dashed");
+
+    if (!container || badges.length === 0 || !pathDashed) return;
+
+    const cRect = container.getBoundingClientRect();
+    const points = [];
+
+    badges.forEach((badge) => {
+      const bRect = badge.getBoundingClientRect();
+      const x = bRect.left - cRect.left + bRect.width / 2;
+      const y = bRect.top - cRect.top + bRect.height / 2;
+      points.push({ x, y });
+    });
+
+    if (points.length < 2) return;
+
+    // Generar camino ondulado con curvas Bézier suaves que serpentean de izquierda a derecha
+    let d = `M ${points[0].x} ${points[0].y - 25} L ${points[0].x} ${points[0].y}`;
+    for (let i = 0; i < points.length - 1; i++) {
+      const p0 = points[i];
+      const p1 = points[i + 1];
+      const dy = p1.y - p0.y;
+      // Puntos de control que generan una curva en forma de colina suave
+      const cp1x = p0.x;
+      const cp1y = p0.y + dy * 0.52;
+      const cp2x = p1.x;
+      const cp2y = p1.y - dy * 0.52;
+      d += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${p1.x} ${p1.y}`;
+    }
+    d += ` L ${points[points.length - 1].x} ${points[points.length - 1].y + 30}`;
+
+    pathDashed.setAttribute("d", d);
+  };
+
+  // Calcular la curva al inicio
+  updateTimelineCurve();
+  window.addEventListener("load", updateTimelineCurve);
+
+  // Recalcular con ResizeObserver para respuesta perfecta al redimensionar la ventana o rotar pantalla
+  if ("ResizeObserver" in window) {
+    const timelineContainer = document.querySelector(".timeline-container");
+    if (timelineContainer) {
+      const ro = new ResizeObserver(() => {
+        updateTimelineCurve();
+      });
+      ro.observe(timelineContainer);
+    }
+  } else {
+    window.addEventListener("resize", updateTimelineCurve);
+  }
+
+  // 6. Smooth Scroll para enlaces internos con animación fluida
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      if (targetId && targetId !== "#") {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      }
+    });
+  });
 });

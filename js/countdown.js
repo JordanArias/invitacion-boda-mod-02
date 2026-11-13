@@ -6,7 +6,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const configDate = window.WEDDING_CONFIG?.fecha?.fechaHoraISO || "2025-11-22T16:00:00";
+  const configDate = window.WEDDING_CONFIG?.fecha?.fechaHoraISO || "2027-12-20T16:00:00";
   const weddingDate = new Date(configDate);
 
   const daysEl = document.getElementById("days");

@@ -17,15 +17,15 @@ const WEDDING_CONFIG = {
   },
   fecha: {
     diaSemana: "Sábado",
-    diaNumero: 22,
+    diaNumero: 20,
     mesNombre: "Noviembre",
-    mesNumero: 11,
-    anio: 2025,
+    mesNumero: 12,
+    anio: 2027,
     ciudadPais: "Valle Campestre, México",
     fechaTexto: "22 de Noviembre de 2025",
     // Fecha y hora para la cuenta regresiva y Google Calendar
-    fechaHoraISO: "2025-11-22T16:00:00",
-    fechaFinISO: "2025-11-23T02:00:00"
+    fechaHoraISO: "2027-12-20T16:00:00",
+    fechaFinISO: "2027-12-20T02:00:00"
   },
   padresYPadrinos: {
     cita: "El amor no se mira con los ojos, sino con el alma... Con la bendición de Dios y el amor de nuestras familias.",
